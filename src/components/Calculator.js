@@ -3,13 +3,21 @@ import Display from "./Display";
 import StyledCalculatorContainer from "./Styled/StyledCalculatorContainer";
 import FunctionButtons from "./FunctionButtons";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Keypad from "./Keypad";
 
 const Calculator = (props) => {
   const [value, setValue] = useState(0);
   const [currentEntry, setCurrentEntry] = useState(0);
   const [currentOperation, setCurrentOPeration] = useState("");
+
+
+  useEffect(() => {
+    console.log("dom changed")
+  })
+
+ 
+
 
   const numEntry = (value) => {
     if (currentEntry) {
